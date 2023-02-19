@@ -1,15 +1,17 @@
-let academic_status = "aprovada";
+let porcentagem = 10;
 
-switch (academic_status) {
-  case "aprovado":
-    console.log("Parabéns, você está no grupo de pessoas aprovadas!");
-    break;
-  case "lista":
-    console.log("Você está na nossa lista de espera.");
-    break;
-  case "reprovada":
-    console.log("Infelizmente, você reprovou.");
-    break;
-  default:
-    console.log("Informação incorreta.");
+if (porcentagem < 100 && porcentagem >= 90) {
+  console.log("A");
+} else if (porcentagem >= 80) {
+  console.log("B");
+} else if (porcentagem >= 70) {
+  console.log("C");
+} else if (porcentagem >= 60) {
+  console.log("D");
+} else if (porcentagem >= 50) {
+  console.log("E");
+} else if (porcentagem < 50 && porcentagem >= 0) {
+  console.log("F");
+} else {
+  console.log("Nota inválida!")
 }

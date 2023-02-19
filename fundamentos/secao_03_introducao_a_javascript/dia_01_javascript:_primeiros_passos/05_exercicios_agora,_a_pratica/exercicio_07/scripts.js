@@ -1,15 +1,10 @@
-let academic_status = "aprovada";
+let num1 = 1;
+let num2 = 2;
+let num3 = 3;
+let veri = false;
 
-switch (academic_status) {
-  case "aprovado":
-    console.log("Parabéns, você está no grupo de pessoas aprovadas!");
-    break;
-  case "lista":
-    console.log("Você está na nossa lista de espera.");
-    break;
-  case "reprovada":
-    console.log("Infelizmente, você reprovou.");
-    break;
-  default:
-    console.log("Informação incorreta.");
+if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 2 == 0) {
+  veri = true;
 }
+
+console.log(veri);

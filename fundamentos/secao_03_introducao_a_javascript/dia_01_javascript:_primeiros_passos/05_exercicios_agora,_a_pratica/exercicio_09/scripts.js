@@ -1,15 +1,10 @@
-let academic_status = "aprovada";
+let custo = 1000;
+let venda = 1500;
+let lucro = null;
 
-switch (academic_status) {
-  case "aprovado":
-    console.log("Parabéns, você está no grupo de pessoas aprovadas!");
-    break;
-  case "lista":
-    console.log("Você está na nossa lista de espera.");
-    break;
-  case "reprovada":
-    console.log("Infelizmente, você reprovou.");
-    break;
-  default:
-    console.log("Informação incorreta.");
+if (custo < 0 || venda < 0) {
+  console.log("Algum valor citado é inválido!");
+} else {
+  lucro = venda - (custo + (0.2 * custo));
+  console.log(lucro);
 }
