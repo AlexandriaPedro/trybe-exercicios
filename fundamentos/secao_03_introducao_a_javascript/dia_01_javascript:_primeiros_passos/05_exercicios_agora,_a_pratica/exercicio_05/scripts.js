@@ -1,15 +1,25 @@
-let academic_status = "aprovada";
+let peca = "rei";
+peca = peca.toLowerCase();
 
-switch (academic_status) {
-  case "aprovado":
-    console.log("Parabéns, você está no grupo de pessoas aprovadas!");
+switch (peca) {
+  case "bispo":
+    console.log("Diagonais.")
     break;
-  case "lista":
-    console.log("Você está na nossa lista de espera.");
+  case "torre":
+    console.log("Linhas retas.")
     break;
-  case "reprovada":
-    console.log("Infelizmente, você reprovou.");
+  case "cavalo":
+    console.log("Movimento em L.")
+    break;
+  case "peão":
+    console.log("Uma direção.")
+    break;
+  case "rei":
+    console.log("todas direções.")
+    break;
+  case "rainha":
+    console.log("Linhas retas ou diagonais.")
     break;
   default:
-    console.log("Informação incorreta.");
+    console.log("Peça inválida!")
 }
