@@ -1,10 +1,17 @@
-let custo = 1000;
-let venda = 1500;
-let lucro = null;
+let number = 4;
+let verificador = 0;
 
-if (custo < 0 || venda < 0) {
-  console.log("Algum valor citado é inválido!");
+if (number != 1) {
+  for (let aux = 2; aux <= number; aux += 1) {
+    if (number % aux == 0) {
+      verificador += 1;
+    }
+  }
+  if (verificador > 1) {
+    console.log(number, ", não é um número primo!")
+  } else {
+    console.log(number, ", é um número primo!")
+  }    
 } else {
-  lucro = venda - (custo + (0.2 * custo));
-  console.log(lucro);
+  console.log(number, ", não é um número primo!")
 }

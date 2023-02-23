@@ -1,10 +1,21 @@
-let num1 = 1;
-let num2 = 2;
-let num3 = 3;
-let veri = false;
+let n = 5;
+let symbol = '*';
+let inputLine = '';
 
-if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 2 == 0) {
-  veri = true;
-}
+let midOfMatrix = (n + 1) / 2;
+let controlLeft = midOfMatrix;
+let controlRight = midOfMatrix;
 
-console.log(veri);
+for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
+  for (let columnIndex = 0; columnIndex <= n; columnIndex += 1) {
+    if (columnIndex > controlLeft && columnIndex < controlRight) {
+      inputLine = inputLine + symbol;
+    } else {
+      inputLine = inputLine + ' ';
+    }
+  }
+  console.log(inputLine);
+  inputLine = '';
+  controlRight += 1;
+  controlLeft -= 1  
+};

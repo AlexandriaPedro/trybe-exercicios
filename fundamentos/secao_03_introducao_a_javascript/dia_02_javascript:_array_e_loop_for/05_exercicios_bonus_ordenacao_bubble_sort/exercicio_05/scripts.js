@@ -1,25 +1,9 @@
-let peca = "rei";
-peca = peca.toLowerCase();
+let number = 5;
 
-switch (peca) {
-  case "bispo":
-    console.log("Diagonais.")
-    break;
-  case "torre":
-    console.log("Linhas retas.")
-    break;
-  case "cavalo":
-    console.log("Movimento em L.")
-    break;
-  case "peão":
-    console.log("Uma direção.")
-    break;
-  case "rei":
-    console.log("todas direções.")
-    break;
-  case "rainha":
-    console.log("Linhas retas ou diagonais.")
-    break;
-  default:
-    console.log("Peça inválida!")
+for (let aux = 1; aux <= number; aux += 1) {
+  let linha = '';
+  for (let aux2 = 1; aux2 <= aux; aux2 += 1) {
+    linha += '*';
+  }
+  console.log(linha);
 }
