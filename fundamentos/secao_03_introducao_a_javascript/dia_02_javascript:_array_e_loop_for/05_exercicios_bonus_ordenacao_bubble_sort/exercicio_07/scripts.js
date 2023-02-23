@@ -1,10 +1,10 @@
-let num1 = 1;
-let num2 = 2;
-let num3 = 3;
-let veri = false;
+let number = 5;
 
-if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 2 == 0) {
-  veri = true;
+for (let aux = 1; aux <= number; aux += 1) {
+  let linha = '';
+  for (let aux2 = 1; aux2 <= number; aux2 += 1) {
+    linha += ' ';
+  }
+  if
+  console.log(linha);
 }
-
-console.log(veri);
