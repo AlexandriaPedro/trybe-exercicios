@@ -1,14 +1,16 @@
-let ang1 = 45;
-let ang2 = 45;
-let ang3 = 90;
-let veri = true;
+let array = ['java', 'javascript', 'python', 'html', 'css'];
 
-if (ang1 <= 0 || ang2 <= 0 || ang3 <= 0) {
-  veri = false;
-} else if ((ang1 + ang2 + ang3) == 180) {
-  veri = true;
-} else {
-  veri = false;
+let maiorPalavra = array[0];
+let menorPalavra = array[0];
+
+for (let palavra of array) {
+  if (palavra.length > maiorPalavra.length) {
+    maiorPalavra = palavra;
+  }
+  if (palavra.length < menorPalavra.length) {
+    menorPalavra = palavra;
+  }
 }
 
-console.log(veri);
+console.log("A maior palavra desse array é:", maiorPalavra);
+console.log("A menor palavra desse array é:", menorPalavra);
