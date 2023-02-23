@@ -1,10 +1,21 @@
-let number = 5;
+let n = 5;
+let symbol = '*';
+let inputLine = '';
 
-for (let aux = 1; aux <= number; aux += 1) {
-  let linha = '';
-  for (let aux2 = 1; aux2 <= number; aux2 += 1) {
-    linha += ' ';
+let midOfMatrix = (n + 1) / 2;
+let controlLeft = midOfMatrix;
+let controlRight = midOfMatrix;
+
+for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
+  for (let columnIndex = 0; columnIndex <= n; columnIndex += 1) {
+    if (columnIndex > controlLeft && columnIndex < controlRight) {
+      inputLine = inputLine + symbol;
+    } else {
+      inputLine = inputLine + ' ';
+    }
   }
-  if
-  console.log(linha);
-}
+  console.log(inputLine);
+  inputLine = '';
+  controlRight += 1;
+  controlLeft -= 1  
+};
