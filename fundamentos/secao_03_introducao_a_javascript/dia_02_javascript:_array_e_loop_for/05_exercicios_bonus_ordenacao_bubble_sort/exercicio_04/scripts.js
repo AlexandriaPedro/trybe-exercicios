@@ -1,14 +1,9 @@
-let ang1 = 45;
-let ang2 = 45;
-let ang3 = 90;
-let veri = true;
+let number = 5;
 
-if (ang1 <= 0 || ang2 <= 0 || ang3 <= 0) {
-  veri = false;
-} else if ((ang1 + ang2 + ang3) == 180) {
-  veri = true;
-} else {
-  veri = false;
+for (let aux = 1; aux <= number; aux += 1) {
+  let linha = '';
+  for (let aux2 = 1; aux2 <= number; aux2 += 1) {
+    linha += '*';
+  }
+  console.log(linha);
 }
-
-console.log(veri);
