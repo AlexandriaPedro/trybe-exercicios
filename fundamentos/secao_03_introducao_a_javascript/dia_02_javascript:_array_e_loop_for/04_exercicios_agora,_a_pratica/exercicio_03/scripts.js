@@ -1,9 +1,8 @@
-let num = 2;
+let word = 'tryber';
+let aocontrario = '';
 
-if (num > 0) {
-  console.log("positive");
-} else if(num < 0) {
-  console.log("negative")
-} else {
-  console.log("zero")
+for (let index = word.length - 1; index >= 0; index -= 1) {
+  aocontrario += word[index];
 }
+
+console.log(word, 'ao contrário é:', aocontrario);
