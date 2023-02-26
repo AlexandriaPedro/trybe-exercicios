@@ -1,56 +1,83 @@
-let order = {
-  name: 'Rafael Andrade',
-  phoneNumber: '11-98763-1416',
-  address: {
-    street: 'Rua das Flores',
-    number: '389',
-    apartment: '701',
-  },
-  order: {
-    pizza: {
-      marguerita: {
-        amount: 1,
-        price: 25,
-      },
-      pepperoni: {
-        amount: 1,
-        price: 20,
-      },
-    },
-    drinks: {
-      coke: {
-        type: 'Coca-Cola Zero',
-        price: 10,
-        amount: 1,
-      },
-    },
-    delivery: {
-      deliveryPerson: 'Ana Silveira',
-      price: 5,
-    },
-  },
-  payment: {
-    total: 60,
-  },
+let lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
 };
 
-function customerInfo(order) {
-  // Adicione abaixo as informações necessárias.
+let lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
 
-  console.log('Olá,', order.order.delivery.deliveryPerson, ', entrega para:', order.name, ', Telefone:', order.phoneNumber, ', R.' , order.address.street, ', Nº:', order.address.number, ', AP:', order.address.apartment);
-}
+let lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
 
-customerInfo(order);
+function addTurnoNa2 (objetoMod, chave, valor) {
+  objetoMod[chave] = valor;
+};
 
-function orderModifier(order) {
-  // Adicione abaixo as informações necessárias.
-  let arrayKeysPizza = Object.keys(order.order.pizza);
-  let arrayValueDrinkCoke = Object.values(order.order.drinks.coke);
+addTurnoNa2 (lesson2, 'turno', 'noite');
 
-  order.name = 'Luiz Silva';
-  order.payment.total = 50.00;
+function listKeysObject (objeto) {
+  let arrayKey = Object.keys(objeto);
+  console.log(arrayKey);
+};
 
-  console.log('Olá,', order.name, ', o valor total de seu pedido de', arrayKeysPizza[0], ',', arrayKeysPizza[1],'e' , arrayValueDrinkCoke[0], 'é R$', order.payment.total);
-}
+listKeysObject (lesson1);
 
-orderModifier(order);
+function showLengthObject (objeto) {
+  let arrayLength = Object.entries(objeto);
+  console.log(arrayLength.length);
+};
+
+showLengthObject (lesson1);
+
+function listValuesObject (objeto) {
+  let arrayValues = Object.values(objeto);
+  console.log(arrayValues);
+};
+
+listValuesObject (lesson1);
+
+let allLessons = {
+  lesson1: {},
+  lesson2: {},
+  lesson3: {},
+};
+Object.assign(allLessons.lesson1, lesson1);
+Object.assign(allLessons.lesson2, lesson2);
+Object.assign(allLessons.lesson3, lesson3);
+
+console.log(allLessons);
+
+function totalStudents (lesson1, lesson2, lesson3) {
+  let total = lesson1.numeroEstudantes + lesson2.numeroEstudantes + lesson3.numeroEstudantes;
+  console.log(total);
+};
+
+totalStudents (lesson1, lesson2, lesson3);
+
+function getValueByNumber (objeto, indice) {
+  let arrayValue = Object.values(objeto);
+  console.log(arrayValue[indice]);
+};
+
+getValueByNumber (lesson1, 0);
+
+function verifyPair (objeto, chave, valor) {
+  if (objeto[chave] == valor) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+};
+
+verifyPair (lesson3, 'turno', 'noite');
+verifyPair (lesson3, 'materia', 'Maria Clara');
+verifyPair (lesson2, 'professor', 'Carlos');
