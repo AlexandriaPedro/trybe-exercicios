@@ -13,7 +13,11 @@ let substituaX = nome => {
 
 let minhasSkills = substituaXFuction => {
   const skills = ['Python', 'C', 'Web'];
-  let newPhrase = `${substituaXFuction}\nMinhas três principais habilidades são:\n* ${skills[0]}\n* ${skills[1]}\n* ${skills[2]}`;
+  let skillsPart = '';
+  for (let tec of skills) {
+    skillsPart += `\n* ${tec}`;
+  }
+  let newPhrase = `${substituaXFuction}\nMinhas três principais habilidades são:${skillsPart}`;
   return newPhrase;
 }
 
