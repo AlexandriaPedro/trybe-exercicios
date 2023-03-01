@@ -6,23 +6,56 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 
 // - Copie esse arquivo e edite apenas ele;
+
 //  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
 
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
+function addTech(event) {
+  let lugarComTech = document.querySelector(".tech");
+  lugarComTech.classList.remove("tech");
+  event.target.classList.add("tech");
+}
+
+firstLi.addEventListener("click", addTech);
+secondLi.addEventListener("click", addTech);
+thirdLi.addEventListener("click", addTech);
+
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+
+function changeTextInBox(event) {
+  let techElement = document.querySelector(".tech"); 
+  techElement.innerText = event.target.value;
+}
+
+input.addEventListener("change", changeTextInBox);
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
 
+function redirect(event) {
+  window.location.replace("https://alexandriapedro.github.io/");
+}
+
+myWebpage.addEventListener("dblclick", redirect);
+
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
-// Segue abaixo um exemplo do uso de event.target:
+function mouseOver(event) {
+  event.target.style.color = "red";
+}
+function mouseLeave(event) {
+  event.target.style.color = "white";
+}
 
+myWebpage.addEventListener("mouseover", mouseOver);
+myWebpage.addEventListener("mouseleave", mouseLeave);
+
+// Segue abaixo um exemplo do uso de event.target:
 
 const resetText = (event) => {
   // O Event é passado como um parâmetro para a função.
