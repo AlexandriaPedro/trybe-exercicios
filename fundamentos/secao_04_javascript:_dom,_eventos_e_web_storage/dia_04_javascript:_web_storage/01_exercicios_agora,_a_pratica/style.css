@@ -1,0 +1,23 @@
+.pseudoHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid green;
+}
+
+.interSections {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: justify;
+}
